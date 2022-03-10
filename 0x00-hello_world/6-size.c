@@ -13,11 +13,11 @@ int main(void)
 	long long int z;
 	float n;
 
-	puts("Size of a char: %lu bytes(s)", (unsigned long)sizeof(ch));
-	puts("Size of an int: %lu byte(s)", (unsigned long)sizeof(x));
-	puts("Size of a long int: %lu bytes(s)", (unsigned long)sizeof(y));
-	puts("Size of a long long int: %lu bytes(s)", (unsigned long)sizeof(z));
-	puts("Size of a float: %lu bytes(s)", (unsigned long)sizeof(n));
+	printf("Size of a char: %lu bytes(s)\n", (unsigned long)sizeof(ch));
+	printf("Size of an int: %lu byte(s)\n", (unsigned long)sizeof(x));
+	printf("Size of a long int: %lu bytes(s)\n", (unsigned long)sizeof(y));
+	printf("Size of a long long int: %lu bytes(s)\n", (unsigned long)sizeof(z));
+	printf("Size of a float: %lu bytes(s)\n", (unsigned long)sizeof(n));
 	return (0);
 
 }
