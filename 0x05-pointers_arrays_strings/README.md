@@ -5,4 +5,4 @@
 | Task 1. | 1-swap.c | function that swaps the values of two integers.|
 | Task 2. | 2-strlen.c | returns the length of a string. |
 | Task 3. | 3-puts.c | prints a string, followed by a new line. |
-
+| Task 4. | 4-print\_rev.c | prints a string in reverse. |
