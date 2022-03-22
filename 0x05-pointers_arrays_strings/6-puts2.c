@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * puts2 - prints every character of a string, starting with the first character.
+ * puts2 - print character of a string, starting with the first character.
  * @str: string to be printed.
  * Return: nothing. Type is void.
  */
