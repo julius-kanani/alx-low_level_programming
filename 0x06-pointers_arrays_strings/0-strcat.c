@@ -14,7 +14,6 @@ char *_strcat(char *dest, char *src)
 	dest_len = 0;
 	while (dest[dest_len] != '\0')	/* get length of dest string */
 		++dest_len;
-	
 	i = 0;
 	while (src[i] != '\0')	/* append src to dest */
 	{
