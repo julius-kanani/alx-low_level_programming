@@ -16,6 +16,7 @@ char *_strpbrk(char *s, char *accept)
 	char *nb;
 
 	i = 0;
+	nb = NULL;
 	while (s[i] != '\0')
 	{
 		if (s[i] == 32 || s[i] == 9)
@@ -23,7 +24,6 @@ char *_strpbrk(char *s, char *accept)
 			++i;
 			continue;
 		}
-		nb = NULL;
 		j = 0;
 		while (accept[j] != '\0')
 		{
