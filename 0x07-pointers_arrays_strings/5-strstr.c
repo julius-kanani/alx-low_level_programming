@@ -2,36 +2,38 @@
 #include <stddef.h>
 
 /**
- * *_strstr - finds the first occurrence of the substr needle in the str
- * haystack. Terminating null bytes (\0) not compared.
- * @haystack: str to find first occurrence of substr.
- * @needle: substr to find its first occurrence in str.
- * Return: ptr to the beginning of the located str, or NULL if the
- * substr is not found.
+ * _strcmp - compares strings
+ * @s1: first str
+ * @s2: second str
+ * Return: their diff or (0)
+ */
+
+int _strcmp(char *s1, char *s2)
+{
+	int j;
+
+	for (j = 0; s1[j] != '\0' && s2[j] != '\0'; j++)
+		if (s1[j] != s2[j])
+			return (s1[j] - s2[j]);
+	return (0);
+}
+
+/**
+ * _strstr - searches for substring.
+ * @haystack: pointer to checked string
+ * @needle: substring
+ *
+ * Return: a pointer to the first byte of the substring
  */
 
 char *_strstr(char *haystack, char *needle)
 {
-	int i, j;
-	char *ptr;
+	int counter;
 
-	i = 0;
-	ptr = NULL;
-	while (haystack[i] != '\0')
+	for (counter = 0; haystack[counter] != '\0' ; counter++)
 	{
-		if (haystack[i] == 32 || haystack[i] == 9)
-		{
-			++i;
-			continue;
-		}
-		j = 0;
-		if (haystack[i] == needle[j])
-		{
-			ptr = &haystack[i];
-			break;
-		}
-		++i;
+		if (_strcmp((haystack + counter), needle) == 0)
+			return (haystack + counter);
 	}
-
-	return (ptr);
+	return (NULL);
 }
