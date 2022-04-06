@@ -9,5 +9,7 @@ void free_grid(int **, int);
 char *argstostr(int, char **);
 char **strtow(char *);
 int _putchar(char);
+char *argstostr(int, char **);
+char **strtow(char *);
 
 #endif
