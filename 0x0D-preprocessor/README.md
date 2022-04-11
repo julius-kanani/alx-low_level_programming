@@ -10,3 +10,6 @@ This directory contains files on how to create macros and how to use them.
 ## 2-main.c
 * prints the name of the file it was compiled from.
 
+## 3-function\_like\_macro.h
+* A function-like macro `ABS(X)` that computes the absolute value of a number `x`.
+
