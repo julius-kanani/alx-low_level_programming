@@ -13,3 +13,5 @@ This directory contains files on how to create macros and how to use them.
 ## 3-function\_like\_macro.h
 * A function-like macro `ABS(X)` that computes the absolute value of a number `x`.
 
+## 4-sum.h
+* A function-like macro `SUM(X,Y)` that computes the sum of the numbers `x` and `y`.
