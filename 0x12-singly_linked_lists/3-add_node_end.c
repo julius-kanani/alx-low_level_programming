@@ -31,7 +31,7 @@ size_t _strlen(const char *str)
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_head = NULL, *last_node = NULL;
+	list_t *new_head, *last_node;
 
 	if (head != NULL && str != NULL)	/* if address of head and str is given. */
 	{
