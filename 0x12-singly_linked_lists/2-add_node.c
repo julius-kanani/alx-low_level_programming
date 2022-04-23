@@ -41,7 +41,7 @@ list_t *add_node(list_t **head, const char *str)
 		temp_h->str = strdup(str);	/* fill in the temp head */
 		temp_h->len = _strlen(str);
 		temp_h->next = *head;	/* give address of the next list_t */
-				
+
 		*head = temp_h;	/* insert at beginning */
 	}
 
