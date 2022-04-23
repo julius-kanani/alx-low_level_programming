@@ -1,41 +1,49 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
+
 /**
-  *_strlen - finds length of a string.
-  *@str: string.
-  *
-  *Return: lengt of string.
-  */
-int _strlen(const char *str)
+ * _strlen - find the length of a string.
+ * @str: string to find its length.
+ * Return: length of a string.
+ */
+
+size_t _strlen(const char *str)
 {
-	int i;
+	int strl;
 
-	while (str[i] != '\0')
-		i++;
+	strl = 0;
+	while (*str != '\0')
+	{
+		++strl;
+		++str;
+	}
 
-	return (i);
+	return (strl);
 }
 
 /**
-  *add_node - adds a new node at the beginning of a list_t.
-  *@head: pointer to first element of the list.
-  *@str: string to be duplicated.
-  *
-  *Return: address of the new element or NULL if it failed.
-  */
+ * add_node - adds a new node to the beginning of a (list_t) list.
+ * @head: a ptr to the head of a list.
+ * @str: str to be be added to the linked list.
+ * Return: address of the new Linked_list.
+ */
+
 list_t *add_node(list_t **head, const char *str)
 {
-	list_t *temp;
+	if (head != NULL && str != NULL)	/* if address of head and str is given */
+	{
+		list_t *temp_h = (list_t *) malloc(sizeof(list_t)); /* create a temp head */
 
-	temp = malloc(sizeof(list_t));
-	if (temp == NULL)
-		return (NULL);
-	/* temp now points to first element*/
-	temp->next = *head;
-	temp->str = strdup(str);
-	temp->len = _strlen(str);
+		if (temp_h == NULL)	/* if no memory allocated */
+			return (*head);	/* return address of head */
 
-	*head = temp;
+		temp_h->str = strdup(str);	/* fill in the temp head */
+		temp_h->len = _strlen(str);
+		temp_h->next = *head;	/* give address of the next list_t */
+				
+		*head = temp_h;	/* insert at beginning */
+	}
 
 	return (*head);
-
 }
