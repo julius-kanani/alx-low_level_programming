@@ -1,50 +1,63 @@
 #include "lists.h"
+#include <stdlib.h>
+#include <string.h>
+
 /**
-  *_strlen - returns length of string.
-  *@str: string;
-  *
-  *Return: length of string.
-  */
-int _strlen(const char *str)
+ * _strlen - find the length of a string.
+ * @str: string to find its string.
+ * Return: length of a string.
+ */
+
+size_t _strlen(const char *str)
 {
-	int i;
+	int strl;
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-
-	return (i);
-
-}
-/**
-  *add_node_end - adds a new node at the end of a list_t.
-  *@head: pointer to head element.
-  *@str: string to be duplicated
-  *
-  *Return: address of the new element.
-  */
-list_t *add_node_end(list_t **head, const char *str)
-{
-	list_t *newNode, *lastNode;
-
-	newNode = malloc(sizeof(list_t));
-	if (newNode == NULL)
-		return (NULL);
-
-	newNode->str = strdup(str);
-	newNode->len = _strlen(str);
-	newNode->next = NULL;
-
-	if (*head == NULL)
-		*head = newNode;
-	else
+	strl = 0;
+	while (*str != '\0')
 	{
-		lastNode = *head;
-
-		while (lastNode->next != NULL)
-			lastNode = lastNode->next;
-		lastNode->next = newNode;
+		++strl;
+		++str;
 	}
 
-	return (newNode);
+	return (strl);
+}
+
+/**
+ * add_node_end - adds a new node at end of a (list_t) list.
+ * @head: address of the head of a (list_t) list.
+ * @str: string to be added to node of the (list_t) list.
+ * Return: address of the new linked list.
+ */
+
+list_t *add_node_end(list_t **head, const char *str)
+{
+	list_t *new_head = NULL, *last_node = NULL;
+
+	if (head != NULL && str != NULL)	/* if address of head and str is given. */
+	{
+		new_head = (list_t *) malloc(sizeof(list_t));
+
+		if (new_head == NULL)	/* if memory allocation was not successful */
+			return (*head);
+
+		new_head->str = strdup(str);
+		new_head->len = _strlen(str);
+		new_head->next = NULL;
+
+		if (*head == NULL)
+			*head = new_head;	/* start of list_t */
+
+		else	/* if list_t already contains a head */
+		{
+
+			last_node = *head;	/* point head to last node */
+
+			while (last_node->next != NULL)	/* last nod not null */
+				last_node = last_node->next; /* address to the next node */
+
+			last_node->next = new_head; /* address to last node */
+		}
+	}
+
+	return (new_head);
 }
