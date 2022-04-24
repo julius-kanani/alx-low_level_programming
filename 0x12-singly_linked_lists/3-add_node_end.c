@@ -31,33 +31,27 @@ size_t _strlen(const char *str)
 
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_head, *last_node;
+	list_t *new_node = NULL, *prev_node = NULL;
 
-	if (head != NULL && str != NULL)	/* if address of head and str is given. */
+	new_node = (list_t *) malloc(sizeof(list_t));
+
+	new_node->str = strdup(str);
+	new_node->len = _strlen(str);
+	new_node->next = NULL;
+
+	if (*head == NULL)  /* if the list has no beginning */
+		*head = new_node;
+	else    /* if the list has a beginning */
 	{
-		new_head = (list_t *) malloc(sizeof(list_t));
+		prev_node = *head;  /* assign the given address to the previous list node */
 
-		if (new_head == NULL)	/* if memory allocation was not successful */
-			return (*head);
-
-		new_head->str = strdup(str);
-		new_head->len = _strlen(str);
-		new_head->next = NULL;
-
-		if (*head == NULL)
-			*head = new_head;	/* start of list_t */
-
-		else	/* if list_t already contains a head */
-		{
-
-			last_node = *head;	/* point head to last node */
-
-			while (last_node->next != NULL)	/* last nod not null */
-				last_node = last_node->next; /* address to the next node */
-
-			last_node->next = new_head; /* address to last node */
+		while (prev_node->next != NULL)
+		{	/* while the previous node has a link to the next node */
+			prev_node = prev_node->next;
 		}
+
+		prev_node->next = new_node; /* assign it as the last node */
 	}
 
-	return (new_head);
+	return (new_node);
 }
