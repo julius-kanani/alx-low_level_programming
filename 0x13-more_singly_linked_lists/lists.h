@@ -25,4 +25,6 @@ size_t print_listint(const listint_t *h);	/* prints all the elements of a (listi
 
 size_t listint_len(const listint_t *h);	/* returns the length of a (listint_t) list. number of elements.*/
 
+listint_t *add_nodeint(listint_t **head, const int n);	/* adds a new node at the beginning of a (listint_t) list. */
+
 #endif
