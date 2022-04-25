@@ -23,4 +23,6 @@ typedef struct listint_s
 
 size_t print_listint(const listint_t *h);	/* prints all the elements of a (listint_t) list.*/
 
+size_t listint_len(const listint_t *h);	/* returns the length of a (listint_t) list. number of elements.*/
+
 #endif
