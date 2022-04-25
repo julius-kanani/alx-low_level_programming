@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * struct listint_s - singly linked list
@@ -32,5 +33,7 @@ listint_t *add_nodeint_end(listint_t **head, const int n);	/* adds a new node at
 void free_listint(listint_t *head);	/*frees a (listint_t) list */
 
 void free_listint2(listint_t **head);	/* frees a (listint_t) list, sets the head to NULL. */
+
+int pop_listint(listint_t **head);	/* deletes the head node of a (listint_t) linked list and returns the head node's data (n). */
 
 #endif
