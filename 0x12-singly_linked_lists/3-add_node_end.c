@@ -6,7 +6,7 @@
   *
   *Return: length of string.
   */
-  
+
 int _strlen(const char *str)
 {
 	int i;
@@ -26,7 +26,7 @@ int _strlen(const char *str)
   *
   *Return: address of the new element.
   */
-  
+
 list_t *add_node_end(list_t **head, const char *str)
 {
 	list_t *newNode, *lastNode;
