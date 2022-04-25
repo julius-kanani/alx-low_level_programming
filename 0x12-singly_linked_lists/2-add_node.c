@@ -1,52 +1,44 @@
 #include "lists.h"
-#include <stdlib.h>
-
 /**
- * _strlen - function to get the lenght of a string
- * @s: string
- * Return: length of the string
- */
-
+  * _strlen - length of a string
+  * @s: input char
+  * Return: length of a string
+**/
 int _strlen(const char *s)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; s[i]; i++)
-		;
+	while (s[i] != '\0')
+	{
+		i++;
+	}
 	return (i);
 }
-
 /**
- * add_node - add nodes to the list
- * @head: current place in the list
- * @str: string to add to the head
- * Return: pointer to current position in list
+ * *add_node - adds new nodes to list
+ * @head: address new head
+ * @str: string to add
+ * Return: head
  */
-
 list_t *add_node(list_t **head, const char *str)
 {
-	int i, len;
-	char *cont;
-	list_t *lst;
+	list_t *new_node;
 
-	if (str == NULL || head == NULL)
-		return (NULL);
-	len = _strlen(str);
-	lst = *head;
-	cont = malloc((len + 1) * sizeof(char));
-	if (cont == NULL)
-		return (NULL);
-	for (i = 0; str[i]; i++)
-		cont[i] = str[i];
-	lst = malloc(sizeof(list_t));
-	if (lst == NULL)
+	new_node = malloc(sizeof(list_t));
+	if (new_node == NULL)
 	{
-		free(cont);
-		return (NULL);
+		printf("Error\n");
+		return (0);
 	}
-	lst->str = cont;
-	lst->len = len;
-	lst->next = *head;
-	*head = lst;
-	return (lst);
+	new_node->str = strdup(str);
+	if (new_node->str == NULL)
+	{
+		printf("Error\n");
+		free(new_node);
+		return (0);
+	}
+	new_node->len = _strlen(str);
+	new_node->next = *head;
+	*head = new_node;
+	return (*head);
 }
