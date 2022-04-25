@@ -29,4 +29,6 @@ listint_t *add_nodeint(listint_t **head, const int n);	/* adds a new node at the
 
 listint_t *add_nodeint_end(listint_t **head, const int n);	/* adds a new node at the end of a (listint_t) list. */
 
+void free_listint(listint_t *head);	/*frees a (listint_t) list */
+
 #endif
