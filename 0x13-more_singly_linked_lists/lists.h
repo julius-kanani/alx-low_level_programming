@@ -38,4 +38,6 @@ int pop_listint(listint_t **head);	/* deletes the head node of a (listint_t) lin
 
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);	/* returns the nth node of a listint_t linked list. */
 
+int sum_listint(listint_t *head);	/* returns the sum of all data (n) of a (listint_t) linked list. */
+
 #endif
