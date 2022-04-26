@@ -42,4 +42,6 @@ int sum_listint(listint_t *head);	/* returns the sum of all data (n) of a (listi
 
 listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n);	/* inserts a new node at a given position */
 
+int delete_nodeint_at_index(listint_t **head, unsigned int index);	/* deletes the node at a given index of a (listint_t) list */
+
 #endif
