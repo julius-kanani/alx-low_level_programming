@@ -46,6 +46,6 @@ terminated string to write to the file.
 > - Permissions of the created file are: ``` rw-rw-r-- ```. If the file already exists, the permissions are not changed.
 > - ``` 1024 ``` bytes are read at a time from the ``` file_from ``` to make less system calls. A buffer is used.
 
-## holberton.h
+## main.h
 > A header file that contains function prototypes of functions written in this project.
 
