@@ -8,3 +8,7 @@ Function: `size_t print_dlistint(const dlistint_t *h);` - prints all the element
 ## Task 1
 Function: `size_t dlistint_len(const dlistint_t *h);` - returns the number of elements in a linked `dlistint_t` list.
 * File-name: `1-dlistint_t_len.c`.
+
+## Task 2
+Function: `dlistint_t *add_dnodeint(dlistint_t **head, const int n);` - adds a new node at the beginning of a dlistint\_t list.
+* File-name: `2-add_dnodeint.c`.
