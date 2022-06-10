@@ -12,3 +12,7 @@ Function: `size_t dlistint_len(const dlistint_t *h);` - returns the number of el
 ## Task 2
 Function: `dlistint_t *add_dnodeint(dlistint_t **head, const int n);` - adds a new node at the beginning of a dlistint\_t list.
 * File-name: `2-add_dnodeint.c`.
+
+## Task 3
+Function: `dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);` - adds a new node at the end of a `dlistint_t` list.
+* File-name: `3-add_dnodeint_end.c`.
