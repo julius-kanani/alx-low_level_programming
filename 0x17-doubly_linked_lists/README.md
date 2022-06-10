@@ -16,3 +16,7 @@ Function: `dlistint_t *add_dnodeint(dlistint_t **head, const int n);` - adds a n
 ## Task 3
 Function: `dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);` - adds a new node at the end of a `dlistint_t` list.
 * File-name: `3-add_dnodeint_end.c`.
+
+## Task 4
+Function: `void free_dlistint(dlistint_t *head);` - frees a `dlistint_t` list.
+* File-name: `4-free_dlistint.c`.
