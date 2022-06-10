@@ -24,3 +24,7 @@ Function: `void free_dlistint(dlistint_t *head);` - frees a `dlistint_t` list.
 ## Task 5.
 Function: `dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);` - returns the nth node of a `dlistint_t` linked list.
 * File-name: `5-get_dnodeint.c`.
+
+## Task 6
+Function: `sum_dlistint(dlistint_t *head);` - returns the sum of all the data(n) of a `dlistint_t` linked list.
+* File-name: `6-sum_dlistint.c`.
