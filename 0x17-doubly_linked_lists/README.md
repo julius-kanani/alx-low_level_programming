@@ -28,3 +28,7 @@ Function: `dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int inde
 ## Task 6
 Function: `sum_dlistint(dlistint_t *head);` - returns the sum of all the data(n) of a `dlistint_t` linked list.
 * File-name: `6-sum_dlistint.c`.
+
+## Task 7
+Function: `dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);` - inserts a new node at a given position."
+* File-name: `7-insert_dnodeint.c`.
