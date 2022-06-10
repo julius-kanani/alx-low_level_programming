@@ -20,3 +20,7 @@ Function: `dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);` - adds
 ## Task 4
 Function: `void free_dlistint(dlistint_t *head);` - frees a `dlistint_t` list.
 * File-name: `4-free_dlistint.c`.
+
+## Task 5.
+Function: `dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index);` - returns the nth node of a `dlistint_t` linked list.
+* File-name: `5-get_dnodeint.c`.
