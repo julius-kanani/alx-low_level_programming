@@ -2,6 +2,7 @@
 #define LISTS_H
 
 #include <stddef.h>
+#include <stdlib.h>
 
 /**
  * struct dlistint_s - doubly linked list
@@ -30,5 +31,8 @@ dlistint_t *add_dnodeint(dlistint_t **head, const int n);
 
 /* adds a new node at the end of a dlistint_t list. */
 dlistint_t *add_dnodeint_end(dlistint_t **head, const int n);
+
+/* frees a dlistint_t list */
+void free_dlistint(dlistint_t *head);
 
 #endif /* LISTS_H */
