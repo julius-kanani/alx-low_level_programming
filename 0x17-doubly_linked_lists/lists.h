@@ -3,6 +3,7 @@
 
 #include <stddef.h>
 #include <stdlib.h>
+#include <stdio.h>
 
 /**
  * struct dlistint_s - doubly linked list
@@ -46,5 +47,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n);
 
 /* deletes the node at the given index of a dlistint_t linked list */
 int delete_dnodeint_at_index(dlistint_t **head, unsigned int index);
+
+/* gets last node of a dlistint_t list */
+dlistint_t *get_last_node(dlistint_t *head);
 
 #endif /* LISTS_H */
