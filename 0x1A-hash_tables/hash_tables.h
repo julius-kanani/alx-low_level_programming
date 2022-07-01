@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
 /**
  * struct hash_node_s - Node of a hash table
@@ -43,5 +44,11 @@ unsigned long int hash_djb2(const unsigned char *str);
 
 /* gives you the index of a key */
 unsigned long int key_index(const unsigned char *key, unsigned long int size);
+
+/* Adds an element to the hash table */
+int hash_table_set(hash_table_t *ht, const char *key, const char *value);
+
+/* creates a new hash node */
+hash_node_t *make_hash_node(const char *key, const char *value);
 
 #endif /* HASH_TABLES_H */
