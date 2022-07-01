@@ -20,3 +20,7 @@ Function: ```int hash_table_set(hash_table_t *ht, const char *key, const char *v
 ## Task 4
 Function: ```char *hash_table_get(const hash_table_t *ht, const char *key);``` - retrieves a value associated with a key.
 * File-name: ````4-hash_table_get.c```.
+
+## Task 5
+Function: ```void hash_table_print(const hash_table_t *ht);``` - prints a hash table.
+* File-name: ```5-hash_table_print.c```.
