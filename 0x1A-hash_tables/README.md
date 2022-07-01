@@ -16,3 +16,7 @@ Function: ```unsigned long int key_index(const unsigned char *key, unsigned long
 ## Task 3
 Function: ```int hash_table_set(hash_table_t *ht, const char *key, const char *value);``` - adds an element to the hash table.
 * File-name: ```3-hash_table_set.c```.
+
+## Task 4
+Function: ```char *hash_table_get(const hash_table_t *ht, const char *key);``` - retrieves a value associated with a key.
+* File-name: ````4-hash_table_get.c```.
